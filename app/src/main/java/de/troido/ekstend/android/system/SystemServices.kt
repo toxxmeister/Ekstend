@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.android.system
 
 import android.accounts.AccountManager
 import android.app.ActivityManager

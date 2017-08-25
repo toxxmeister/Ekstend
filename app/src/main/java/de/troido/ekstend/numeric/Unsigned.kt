@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.numeric
 
 import kotlin.experimental.and
 

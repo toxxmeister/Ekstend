@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.numeric
 
 /**
  * Applies a dead zone transformation with the given center and radius to `this` floating point

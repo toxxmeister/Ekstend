@@ -1,10 +1,7 @@
-package de.troido.ekstend
+package de.troido.ekstend.serial
 
-import android.util.Base64
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
-
-val EMPTY = ByteArray(0)
 
 @Suppress("NOTHING_TO_INLINE")
 inline fun Short.toByteArray(order: ByteOrder = ByteOrder.BIG_ENDIAN): ByteArray =
@@ -25,7 +22,3 @@ inline fun Float.toByteArray(order: ByteOrder = ByteOrder.BIG_ENDIAN): ByteArray
 @Suppress("NOTHING_TO_INLINE")
 inline fun Double.toByteArray(order: ByteOrder = ByteOrder.BIG_ENDIAN): ByteArray =
         ByteBuffer.allocate(8).order(order).putDouble(this).array()
-
-@Suppress("NOTHING_TO_INLINE")
-inline fun ByteArray.toBase64(): String =
-        Base64.encodeToString(this, Base64.DEFAULT)

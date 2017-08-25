@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.android.persistence
 
 import android.content.SharedPreferences
 

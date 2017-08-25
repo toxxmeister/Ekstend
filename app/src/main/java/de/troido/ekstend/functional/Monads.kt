@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.functional
 
 /**
  * Given a [List]`<T?>` returns a [List]`<T>` if no elements are `null`, otherwise returns `null`.

@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.collections
 
 /**
  * Returns the first element which is an instance of [U] in `this` list of [T]s, where [U] is a

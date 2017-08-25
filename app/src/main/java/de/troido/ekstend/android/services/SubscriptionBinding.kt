@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.android.services
 
 import android.content.ComponentName
 import android.content.ServiceConnection

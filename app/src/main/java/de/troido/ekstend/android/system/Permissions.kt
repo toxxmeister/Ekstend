@@ -1,10 +1,11 @@
-package de.troido.ekstend
+package de.troido.ekstend.android.system
 
 import android.app.Activity
 import android.content.pm.PackageManager
 import android.support.annotation.StringRes
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import de.troido.ekstend.android.views.longToast
 
 @Suppress("NOTHING_TO_INLINE")
 inline fun Activity.checkPermission(permission: String): Boolean =

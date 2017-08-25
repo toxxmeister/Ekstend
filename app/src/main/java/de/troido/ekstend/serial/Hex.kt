@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.serial
 
 private const val HEX_CHARS = "0123456789abcdef"
 

@@ -1,4 +1,4 @@
-package de.troido.ekstend
+package de.troido.ekstend.android.views
 
 import android.app.Activity
 import android.support.annotation.StringRes
