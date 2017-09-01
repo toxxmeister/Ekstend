@@ -18,3 +18,7 @@ inline operator fun <T> List<T>.component7(): T =
 @Suppress("NOTHING_TO_INLINE")
 inline operator fun <T> List<T>.component8(): T =
         get(7)
+
+@Suppress("NOTHING_TO_INLINE")
+inline operator fun <T> List<T>.component9(): T =
+        get(8)
