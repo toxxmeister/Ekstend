@@ -95,6 +95,7 @@ val Context.accessibilityManager: AccessibilityManager
 
 /** Returns a [Context.CAPTIONING_SERVICE] system service. */
 val Context.captioningManager: CaptioningManager
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     get() = getSystemService(Context.CAPTIONING_SERVICE) as CaptioningManager
 
 /** Returns a [Context.KEYGUARD_SERVICE] system service. */
@@ -175,6 +176,7 @@ val Context.carrierConfigManager: CarrierConfigManager
 
 /** Returns a [Context.TELECOM_SERVICE] system service. */
 val Context.telecomManager: TelecomManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.TELECOM_SERVICE) as TelecomManager
 
 /** Returns a [Context.CLIPBOARD_SERVICE] system service. */
@@ -191,6 +193,7 @@ val Context.textServicesManager: TextServicesManager
 
 /** Returns a [Context.APPWIDGET_SERVICE] system service. */
 val Context.appWidgetManager: AppWidgetManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.APPWIDGET_SERVICE) as AppWidgetManager
 
 /** Returns a [Context.DROPBOX_SERVICE] system service. */
@@ -215,6 +218,7 @@ val Context.nfcManager: NfcManager
 
 /** Returns a [Context.BLUETOOTH_SERVICE] system service. */
 val Context.bluetoothManager: BluetoothManager
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     get() = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
 
 /** Returns a [Context.USB_SERVICE] system service. */
@@ -223,6 +227,7 @@ val Context.usbManager: UsbManager
 
 /** Returns a [Context.LAUNCHER_APPS_SERVICE] system service. */
 val Context.launcherApps: LauncherApps
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
 
 /** Returns a [Context.INPUT_SERVICE] system service. */
@@ -231,34 +236,42 @@ val Context.inputManager: InputManager
 
 /** Returns a [Context.DISPLAY_SERVICE] system service. */
 val Context.displayManager: DisplayManager
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     get() = getSystemService(Context.DISPLAY_SERVICE) as DisplayManager
 
 /** Returns a [Context.USER_SERVICE] system service. */
 val Context.userManager: UserManager
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     get() = getSystemService(Context.USER_SERVICE) as UserManager
 
 /** Returns a [Context.RESTRICTIONS_SERVICE] system service. */
 val Context.restrictionsManager: RestrictionsManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.RESTRICTIONS_SERVICE) as RestrictionsManager
 
 /** Returns a [Context.APP_OPS_SERVICE] system service. */
 val Context.appOpsManager: AppOpsManager
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     get() = getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
 
 /** Returns a [Context.CAMERA_SERVICE] system service. */
 val Context.cameraManager: CameraManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.CAMERA_SERVICE) as CameraManager
 
 /** Returns a [Context.PRINT_SERVICE] system service. */
 val Context.printManager: PrintManager
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     get() = getSystemService(Context.PRINT_SERVICE) as PrintManager
 
 /** Returns a [Context.CONSUMER_IR_SERVICE] system service. */
 val Context.consumerIrManager: ConsumerIrManager
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     get() = getSystemService(Context.CONSUMER_IR_SERVICE) as ConsumerIrManager
 
 /** Returns a [Context.TV_INPUT_SERVICE] system service. */
 val Context.tvInputManager: TvInputManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.TV_INPUT_SERVICE) as TvInputManager
 
 /** Returns a [Context.USAGE_STATS_SERVICE] system service. */
@@ -268,18 +281,22 @@ val Context.usageStatsManager: UsageStatsManager
 
 /** Returns a [Context.MEDIA_SESSION_SERVICE] system service. */
 val Context.mediaSessionManager: MediaSessionManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.MEDIA_SESSION_SERVICE) as MediaSessionManager
 
 /** Returns a [Context.BATTERY_SERVICE] system service. */
 val Context.batteryManager: BatteryManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.BATTERY_SERVICE) as BatteryManager
 
 /** Returns a [Context.JOB_SCHEDULER_SERVICE] system service. */
 val Context.jobScheduler: JobScheduler
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
 
 /** Returns a [Context.MEDIA_PROJECTION_SERVICE] system service. */
 val Context.mediaProjectionManager: MediaProjectionManager
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     get() = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
 
 /** Returns a [Context.MIDI_SERVICE] system service. */
