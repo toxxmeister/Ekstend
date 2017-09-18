@@ -1,6 +1,8 @@
 package de.troido.ekstend.android.persistence
 
+import android.content.Context
 import android.content.SharedPreferences
+import android.preference.PreferenceManager
 
 @Suppress("NOTHING_TO_INLINE")
 inline fun SharedPreferences.getStringFloat(key: String, defValue: Float = 0.0f): Float =
@@ -21,3 +23,10 @@ inline fun SharedPreferences.getStringShort(key: String, defValue: Short = 0): S
 @Suppress("NOTHING_TO_INLINE")
 inline fun SharedPreferences.getStringByte(key: String, defValue: Byte = 0): Byte =
         getString(key, if (defValue == 0.toByte()) "0" else defValue.toString()).toByte()
+
+val Context.defaultPreferences: SharedPreferences
+    get() = PreferenceManager.getDefaultSharedPreferences(this)
+
+inline fun SharedPreferences.edit(block: (SharedPreferences.Editor) -> Unit) {
+    edit().apply(block).apply()
+}
