@@ -27,6 +27,6 @@ inline fun SharedPreferences.getStringByte(key: String, defValue: Byte = 0): Byt
 val Context.defaultPreferences: SharedPreferences
     get() = PreferenceManager.getDefaultSharedPreferences(this)
 
-inline fun SharedPreferences.edit(block: (SharedPreferences.Editor) -> Unit) {
+inline fun SharedPreferences.edit(block: SharedPreferences.Editor.() -> Unit) {
     edit().apply(block).apply()
 }
