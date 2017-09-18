@@ -3,14 +3,14 @@ package de.troido.ekstend.android.services
 import android.app.Service
 import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
 import android.content.ServiceConnection
+import de.troido.ekstend.android.intents.intent
 
 inline fun <reified S : Service> Context.startService(): ComponentName =
-        startService(Intent(this, S::class.java))
+        startService(intent<S>())
 
 inline fun <reified S : Service> Context.stopService(): Boolean =
-        stopService(Intent(this, S::class.java))
+        stopService(intent<S>())
 
 inline fun <reified S : Service> Context.bindService(conn: ServiceConnection): Boolean =
-        bindService(Intent(this, S::class.java), conn, 0)
+        bindService(intent<S>(), conn, 0)
