@@ -8,6 +8,7 @@ import android.support.annotation.ColorRes
 import android.support.annotation.DrawableRes
 import android.support.v4.app.NotificationCompat
 import android.widget.RemoteViews
+import de.troido.ekstend.android.system.notificationManager
 
 inline fun Context.notification(
         channelId: String,
@@ -32,6 +33,7 @@ inline fun Context.notification(
             intent?.let(this::setContentIntent)
             content?.let(this::setContent)
             autoCancel?.let(this::setAutoCancel)
+            block()
         }.build()
 
 @Suppress("NOTHING_TO_INLINE")
@@ -49,3 +51,13 @@ inline fun Context.notification(
 ): Notification =
         notification(channelId, title, text, smallIcon, largeIcon,
                      info, color, intent, content, autoCancel) {}
+
+@Suppress("NOTHING_TO_INLINE")
+inline fun Context.notify(id: Int, notification: Notification) {
+    notificationManager.notify(id, notification)
+}
+
+@Suppress("NOTHING_TO_INLINE")
+inline fun Context.notify(notification: Notification) {
+    notificationManager.notify(0, notification)
+}
