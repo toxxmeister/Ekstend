@@ -8,13 +8,15 @@ import android.support.annotation.ColorRes
 import android.support.annotation.DrawableRes
 import android.support.v4.app.NotificationCompat
 import android.widget.RemoteViews
+import de.troido.ekstend.android.application.applicationName
+import de.troido.ekstend.android.application.defaultAppIcon
 import de.troido.ekstend.android.system.notificationManager
 
 inline fun Context.notification(
         channelId: String,
-        title: String,
-        text: String,
-        @DrawableRes smallIcon: Int,
+        title: String? = null,
+        text: String? = null,
+        @DrawableRes smallIcon: Int = defaultAppIcon,
         largeIcon: Bitmap? = null,
         info: String? = null,
         @ColorRes color: Int? = null,
@@ -24,8 +26,8 @@ inline fun Context.notification(
         block: NotificationCompat.Builder.() -> Unit
 ): Notification =
         NotificationCompat.Builder(this, channelId).apply {
-            setContentTitle(title)
-            setContentText(text)
+            setContentTitle(title ?: applicationName)
+            setContentText(text ?: applicationName)
             setSmallIcon(smallIcon)
             largeIcon?.let(this::setLargeIcon)
             color?.let(this::setColor)
@@ -39,9 +41,9 @@ inline fun Context.notification(
 @Suppress("NOTHING_TO_INLINE")
 inline fun Context.notification(
         channelId: String,
-        title: String,
-        text: String,
-        @DrawableRes smallIcon: Int,
+        title: String? = null,
+        text: String? = null,
+        @DrawableRes smallIcon: Int = defaultAppIcon,
         largeIcon: Bitmap? = null,
         info: String? = null,
         @ColorRes color: Int? = null,
